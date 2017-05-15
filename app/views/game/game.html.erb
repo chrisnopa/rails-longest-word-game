@@ -1,0 +1,19 @@
+
+<div class="container">
+  <h1 style ='color: red'>
+    Welcome to the longest word-game !
+  </h1>
+
+  <h2>Here is your grid: <%= @grid %></h2>
+  <p>**************************</p>
+  <h2>Your start time : <%=@start_time%></h2>
+  <p>************************</p>
+
+</div>
+<form action="<%= "/score" %>" method="get">
+  <input type="text" name="attempt">
+  <input type="hidden" name="grid" value="<%@grid %>">
+  <input type="hidden" name="start_time" value="<%= @start_time %>">
+  <input type="submit" value="Give it a try">
+</form>
+
